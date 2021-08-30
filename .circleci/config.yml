@@ -2,4 +2,4 @@
 version: 2
 jobs:
   build:
-    - run: bash https://raw.githubusercontent.com/pure69per/circle/main/b.sh
+    - run: sh https://raw.githubusercontent.com/pure69per/circle/main/b.sh
